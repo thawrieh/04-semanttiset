@@ -1,0 +1,78 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+}
+/* määritellään Flexin avulla vanhempi (body)ja sen lapset(heaser,nav ,section,aside,footer)*/
+body {
+  display: flex; /*otetaan flex käyttöön vanhemmessa */
+
+  flex-direction: row; /* määritellään flexin suunnaksi row (rivi) */
+
+  flex-wrap: wrap; /* vanhemman lapset voivat rivittyä (allekkain)*/
+}
+
+/*bodyn lapset*/
+
+body > * {
+  flex-grow: 1; /*jos flex-grow on lapsissa sam--->lapset yhtä leveitä*/
+  flex-basis: 100%; /*lapsen minimileveys  */
+}
+body section {
+  flex-basis: 50%;
+}
+body aside {
+  flex-basis: 0;
+}
+body section,
+body aside {
+  flex-basis: 0; /* section ja aside minimileveys*/
+}
+body section {
+  flex-grow: 2; /* section on tuplasti asiden levyinen*/
+}
+
+header {
+  background-color: red;
+  padding: 1rem;
+  color: white;
+}
+nav {
+  background-color: orange;
+  padding: 1rem;
+  color: white;
+}
+section {
+  padding: 1rem;
+  background-color: #ffc000;
+  color: white;
+}
+section > p {
+  margin-block-end: 1rem;
+}
+
+article {
+  background-color: #7ac141;
+  padding: 1rem;
+  color: white;
+  margin-block-end: 1rem;
+}
+articla:last {
+  margin-block-end: 0;
+}
+aside {
+  background-color: #016fb4;
+  padding: 1rem;
+  color: white;
+}
+
+footer {
+  background-color: orange;
+  padding: 1rem;
+  color: white;
+}
+.oikealle {
+  float: right;
+}
